@@ -1,6 +1,6 @@
 # Mi Barrio — Ciudad Granada
 
-Portal de entrega académica del proyecto **Mi Barrio — Ciudad Granada**. Este repositorio principal reúne la documentación y referencia los tres repositorios independientes del sistema mediante **Git Submodules**, sin convertirlos en un monorepo.
+Portal de entrega académica del proyecto **Mi Barrio — Ciudad Granada**. Este repositorio principal reúne la documentación y está preparado para referenciar los tres repositorios independientes del sistema mediante **Git Submodules**, sin convertirlos en un monorepo.
 
 > **Estado del avance:** Fase 11.2 reportada como finalizada el **2026-11-16**. HU-07 a HU-13 en estado **Validada**; HU-01 y HU-02 en **En pruebas**; HU-03 a HU-06 en **En desarrollo**.
 
@@ -214,8 +214,11 @@ mi-barrio-frontend/contracts/public.openapi.yaml + .sha256
 Comandos de verificación:
 
 ```bash
-cd mi-barrio-api && npm run contracts:verify
-cd mi-barrio-frontend && npm run contracts:verify
+cd mi-barrio-api
+npm run contracts:verify
+
+cd ../mi-barrio-frontend
+npm run contracts:verify
 ```
 
 Hashes finales registrados en la Fase 11.2:
@@ -232,9 +235,14 @@ Hashes finales registrados en la Fase 11.2:
 Cada repositorio expone un comando de integración continua local:
 
 ```bash
-cd mi-barrio-backend && npm run ci
-cd mi-barrio-api && npm run ci
-cd mi-barrio-frontend && npm run ci
+cd mi-barrio-backend
+npm run ci
+
+cd ../mi-barrio-api
+npm run ci
+
+cd ../mi-barrio-frontend
+npm run ci
 ```
 
 La suite de aceptación del frontend requiere PostgreSQL, backend, API y Vite en ejecución:
