@@ -84,7 +84,8 @@ Preparado localmente, sin remoto:
 |---|---|
 | Repositorio Git local | Inicializado en `main` |
 | Commit inicial | `2577ba93edfb2e77f7e8d485310db2d28325c354` |
-| Archivos versionados | 77 |
+| HEAD actual | `f67a733` (3 commits locales) |
+| Archivos versionados | 78 |
 | README principal en español | Sí |
 | Copia de documentación y evidencias | Sí: 72 archivos, incluida la Fase 11.2 |
 | `.gitignore` | Sí: excluye `.env`, dependencias, builds y secretos |
@@ -94,7 +95,7 @@ Preparado localmente, sin remoto:
 | Remoto del portal | Ninguno |
 | Push o publicación | **No realizado** |
 
-El portal pesa aproximadamente **3,02 MB**, sin `node_modules`, `dist`, `test-results` ni `temp-reference/`.
+El portal pesa aproximadamente **3,04 MB**, sin `node_modules`, `dist`, `test-results` ni `temp-reference/`.
 
 ---
 
