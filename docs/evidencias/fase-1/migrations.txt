@@ -1,0 +1,29 @@
+            version             |          applied_at           
+--------------------------------+-------------------------------
+ 001_create_barrio.sql          | 2026-11-15 17:15:37.458719-05
+ 002_create_manzana_estrato.sql | 2026-11-15 17:15:37.516602-05
+ 003_create_fuente.sql          | 2026-11-15 17:15:37.533243-05
+ 004_create_barrio_fuente.sql   | 2026-11-15 17:15:37.543824-05
+ 005_create_indexes.sql         | 2026-11-15 17:15:37.558017-05
+(5 filas)
+
+    table_name     
+-------------------
+ barrio
+ barrio_fuente
+ fuente
+ geography_columns
+ geometry_columns
+ manzana_estrato
+ schema_migrations
+ spatial_ref_sys
+(8 filas)
+
+           conname            |                            definicion                            
+------------------------------+------------------------------------------------------------------
+ barrio_fuente_pkey           | PRIMARY KEY (id)
+ barrio_fuente_unica          | UNIQUE (barrio_id, fuente_id, campo)
+ barrio_fuente_barrio_id_fkey | FOREIGN KEY (barrio_id) REFERENCES barrio(id) ON DELETE CASCADE
+ barrio_fuente_fuente_id_fkey | FOREIGN KEY (fuente_id) REFERENCES fuente(id) ON DELETE RESTRICT
+(4 filas)
+

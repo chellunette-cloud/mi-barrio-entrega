@@ -1,0 +1,42 @@
+
+> mi-barrio-api@0.1.0 ci
+> npm run lint && npm run typecheck && npm run check:lines && npm run contracts:verify && npm run test
+
+
+> mi-barrio-api@0.1.0 lint
+> eslint .
+
+
+> mi-barrio-api@0.1.0 typecheck
+> tsc --noEmit
+
+
+> mi-barrio-api@0.1.0 check:lines
+> node scripts/check-line-limit.mjs
+
+OK: todos los archivos de código tienen <= 100 líneas.
+
+> mi-barrio-api@0.1.0 contracts:verify
+> node scripts/sync-internal-contract.mjs --verify
+
+OK contrato interno 03873c01e4ef1ed65b0fd7ef629c1a1bbd3b85e53c0f81ade791c7219e231684
+
+> mi-barrio-api@0.1.0 test
+> vitest run
+
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/samyl/OneDrive/Documentos/miBarrio/mi-barrio-api[39m
+
+ [32m✓[39m tests/contract/public.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 97[2mms[22m[39m
+ [32m✓[39m tests/integration/http.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m tests/integration/backendClient.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/unit/GetBarrio.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[32m8 passed[39m[22m[90m (8)[39m
+[2m   Start at [22m 17:56:36
+[2m   Duration [22m 1.86s[2m (transform 94ms, setup 0ms, collect 764ms, tests 165ms, environment 1ms, prepare 327ms)[22m
+
+[90mstderr[2m | tests/integration/http.test.ts[2m > [22m[2mAPI pública[2m > [22m[2mtraduce errores internos sin filtrar detalles
+[22m[39m{"level":"error","requestId":"99134ca8-2bb7-45a0-bd61-67c4aa4be20a","backendStatus":404,"code":"BARRIO_NO_ENCONTRADO"}
+

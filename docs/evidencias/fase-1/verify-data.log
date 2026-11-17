@@ -1,0 +1,8 @@
+
+> mi-barrio-backend@0.1.0 verify:data
+> node scripts/verify-data-hashes.mjs
+
+OK barrio-ciudad-granada.geojson 1CDD6D0A63E3AD38393EB8FB37CBF7E2CAD1AD507D97CC2EDCBE2E8CCD5B0F6E
+OK estrato-ciudad-granada.geojson 175E3BA4BAD361863B1731669AD7A9E1EFD7F2B531FA950EE170D5D8619591E9
+OK barrio-atributos-oficial.json 58EC23169DBA0C43EEEA8D0339C04DD07DE1B29C61D8AA9631087C31BF8FF229
+OK: 3 snapshots verificados contra manifest.json.

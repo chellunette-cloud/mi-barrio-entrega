@@ -1,0 +1,17 @@
+# Plantilla ilustrativa de .gitmodules
+#
+# NO renombrar manualmente a .gitmodules.
+# Usar: pwsh entrega/configurar-submodulos.ps1 -FrontendUrl ... -ApiUrl ... -BackendUrl ...
+# Requiere que los tres remotos existan y tengan al menos un commit.
+
+[submodule "mi-barrio-frontend"]
+	path = mi-barrio-frontend
+	url = <URL_REAL_DEL_REPOSITORIO_FRONTEND>
+
+[submodule "mi-barrio-api"]
+	path = mi-barrio-api
+	url = <URL_REAL_DEL_REPOSITORIO_API>
+
+[submodule "mi-barrio-backend"]
+	path = mi-barrio-backend
+	url = <URL_REAL_DEL_REPOSITORIO_BACKEND>

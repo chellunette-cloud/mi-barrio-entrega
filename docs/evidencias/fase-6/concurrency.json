@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-11-16T03:15:39.338Z",
+  "endpoint": "/api/v1/lugares?categoria=educacion&limite=100",
+  "rounds": [
+    {
+      "round": 1,
+      "concurrency": 5,
+      "elapsedMs": 232.71,
+      "statuses": {
+        "200": 5
+      }
+    },
+    {
+      "round": 2,
+      "concurrency": 5,
+      "elapsedMs": 22.98,
+      "statuses": {
+        "200": 5
+      }
+    },
+    {
+      "round": 3,
+      "concurrency": 5,
+      "elapsedMs": 12.63,
+      "statuses": {
+        "200": 5
+      }
+    }
+  ],
+  "note": "Escenario controlado con 5 solicitudes concurrentes; rate limit activo."
+}

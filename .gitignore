@@ -1,0 +1,28 @@
+# Dependencias y artefactos generados
+node_modules/
+dist/
+build/
+coverage/
+test-results/
+playwright-report/
+*.tsbuildinfo
+*.log
+# Los logs de evidencia académica sí forman parte del entregable
+!docs/evidencias/**/*.log
+
+# Entornos y secretos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# Referencia docente local (no forma parte del entregable)
+temp-reference/

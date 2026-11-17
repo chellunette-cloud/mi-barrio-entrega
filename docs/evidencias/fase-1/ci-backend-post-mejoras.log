@@ -1,0 +1,44 @@
+
+> mi-barrio-backend@0.1.0 ci
+> npm run lint && npm run typecheck && npm run check:lines && npm run verify:data && npm run test
+
+
+> mi-barrio-backend@0.1.0 lint
+> eslint .
+
+
+> mi-barrio-backend@0.1.0 typecheck
+> tsc --noEmit
+
+
+> mi-barrio-backend@0.1.0 check:lines
+> node scripts/check-line-limit.mjs
+
+OK: todos los archivos de código tienen <= 100 líneas.
+
+> mi-barrio-backend@0.1.0 verify:data
+> node scripts/verify-data-hashes.mjs
+
+OK barrio-ciudad-granada.geojson 1CDD6D0A63E3AD38393EB8FB37CBF7E2CAD1AD507D97CC2EDCBE2E8CCD5B0F6E
+OK estrato-ciudad-granada.geojson 175E3BA4BAD361863B1731669AD7A9E1EFD7F2B531FA950EE170D5D8619591E9
+OK barrio-atributos-oficial.json 58EC23169DBA0C43EEEA8D0339C04DD07DE1B29C61D8AA9631087C31BF8FF229
+OK: 3 snapshots verificados contra manifest.json.
+
+> mi-barrio-backend@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 C:/Users/samyl/OneDrive/Documentos/miBarrio/mi-barrio-backend
+
+ ✓ tests/geographic/geometry.test.ts (1 test) 77ms
+ ✓ tests/integration/repository.test.ts (2 tests) 62ms
+ ✓ tests/integration/http.test.ts (3 tests) 46ms
+ ✓ tests/contract/internal.test.ts (2 tests) 30ms
+ ✓ tests/unit/mapBarrio.test.ts (2 tests) 3ms
+ ✓ tests/unit/mapGeometria.test.ts (1 test) 2ms
+
+ Test Files  6 passed (6)
+      Tests  11 passed (11)
+   Start at  18:11:51
+   Duration  2.49s (transform 139ms, setup 0ms, collect 722ms, tests 220ms, environment 1ms, prepare 583ms)
+

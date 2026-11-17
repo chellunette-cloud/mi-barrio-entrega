@@ -1,0 +1,4 @@
+
+> mi-barrio-backend@0.1.0 migrate
+> tsx src/infrastructure/db/migrate.ts
+

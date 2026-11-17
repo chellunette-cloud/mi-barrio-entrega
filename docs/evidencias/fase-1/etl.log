@@ -1,0 +1,7 @@
+
+> mi-barrio-backend@0.1.0 etl
+> tsx src/infrastructure/etl/run.ts
+
+barrio OK: URBANIZACION CIUDAD GRANADA · 58 vértices · centroide 4.641833130667935, -74.17175846032757
+estrato OK: 34 manzanas, todas estrato 2, todas dentro del polígono
+ETL Fase 1 completado en una transacción.

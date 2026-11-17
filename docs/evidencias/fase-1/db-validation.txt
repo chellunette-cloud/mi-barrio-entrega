@@ -1,0 +1,16 @@
+ id |      slug      |           nombre            | codigo_id | localidad_nombre |  upz_nombre  |  upl  | area_ha | area_m2  | lotes | poblacion_estimada | estrato_predominante | manzanas_estrato2 | vertices |     lat     |      lon      
+----+----------------+-----------------------------+-----------+------------------+--------------+-------+---------+----------+-------+--------------------+----------------------+-------------------+----------+-------------+---------------
+  1 | ciudad-granada | URBANIZACION CIUDAD GRANADA | LEG00645  | Kennedy          | Patio Bonito | UPL14 |    9.10 | 94551.13 |   705 |               3807 |                    2 |                34 |       58 | 4.641833131 | -74.171758460
+(1 fila)
+
+ total | estrato2 | invalidas 
+-------+----------+-----------
+    34 |       34 |         0
+(1 fila)
+
+ codigo |  entidad  | fecha_consulta | licencia  |                                         campos                                         
+--------+-----------+----------------+-----------+----------------------------------------------------------------------------------------
+ F-01   | SDP/UAECD | 2026-11-15     | CC BY 4.0 | {area,centroide,codigo_id,densidad,geometria,localidad,lotes,nombre,poblacion,upl,upz}
+ F-02   | SDP/UAECD | 2026-11-15     | CC BY 4.0 | {estrato,manzanas_estrato2}
+(2 filas)
+

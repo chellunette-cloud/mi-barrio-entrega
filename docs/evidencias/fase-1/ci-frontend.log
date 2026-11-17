@@ -1,0 +1,50 @@
+
+> mi-barrio-frontend@0.1.0 ci
+> npm run lint && npm run typecheck && npm run check:lines && npm run contracts:verify && npm run test && npm run build
+
+
+> mi-barrio-frontend@0.1.0 lint
+> eslint .
+
+
+> mi-barrio-frontend@0.1.0 typecheck
+> tsc --noEmit
+
+
+> mi-barrio-frontend@0.1.0 check:lines
+> node scripts/check-line-limit.mjs
+
+OK: todos los archivos de código tienen <= 100 líneas.
+
+> mi-barrio-frontend@0.1.0 contracts:verify
+> node scripts/sync-public-contract.mjs --verify
+
+OK contrato público fbf6f56cf80eb1cde086ddc0588491e9e1fba3ffc4e20142c3b024983fd405e9
+
+> mi-barrio-frontend@0.1.0 test
+> vitest run
+
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/samyl/OneDrive/Documentos/miBarrio/mi-barrio-frontend[39m
+
+ [32m✓[39m tests/unit/format.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/integration/BarrioFicha.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 141[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m   Start at [22m 17:56:43
+[2m   Duration [22m 2.24s[2m (transform 119ms, setup 635ms, collect 240ms, tests 148ms, environment 2.23s, prepare 403ms)[22m
+
+
+> mi-barrio-frontend@0.1.0 build
+> tsc --noEmit && vite build
+
+[36mvite v7.3.8 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 90 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  0.55 kB[22m[1m[22m[2m │ gzip:   0.34 kB[22m
+[2mdist/[22m[35massets/index-Dvgdntxj.css  [39m[1m[2m 30.87 kB[22m[1m[22m[2m │ gzip:  10.36 kB[22m
+[2mdist/[22m[36massets/index-7xM4Pvo5.js   [39m[1m[2m387.79 kB[22m[1m[22m[2m │ gzip: 118.41 kB[22m
+[32m✓ built in 1.62s[39m

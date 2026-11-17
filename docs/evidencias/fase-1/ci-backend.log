@@ -1,0 +1,44 @@
+
+> mi-barrio-backend@0.1.0 ci
+> npm run lint && npm run typecheck && npm run check:lines && npm run verify:data && npm run test
+
+
+> mi-barrio-backend@0.1.0 lint
+> eslint .
+
+
+> mi-barrio-backend@0.1.0 typecheck
+> tsc --noEmit
+
+
+> mi-barrio-backend@0.1.0 check:lines
+> node scripts/check-line-limit.mjs
+
+OK: todos los archivos de código tienen <= 100 líneas.
+
+> mi-barrio-backend@0.1.0 verify:data
+> node scripts/verify-data-hashes.mjs
+
+OK barrio-ciudad-granada.geojson 1CDD6D0A63E3AD38393EB8FB37CBF7E2CAD1AD507D97CC2EDCBE2E8CCD5B0F6E
+OK estrato-ciudad-granada.geojson 175E3BA4BAD361863B1731669AD7A9E1EFD7F2B531FA950EE170D5D8619591E9
+OK barrio-atributos-oficial.json 58EC23169DBA0C43EEEA8D0339C04DD07DE1B29C61D8AA9631087C31BF8FF229
+OK: 3 snapshots verificados contra manifest.json.
+
+> mi-barrio-backend@0.1.0 test
+> vitest run
+
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/samyl/OneDrive/Documentos/miBarrio/mi-barrio-backend[39m
+
+ [32m✓[39m tests/geographic/geometry.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 76[2mms[22m[39m
+ [32m✓[39m tests/integration/repository.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 49[2mms[22m[39m
+ [32m✓[39m tests/integration/http.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m tests/contract/internal.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 33[2mms[22m[39m
+ [32m✓[39m tests/unit/mapBarrio.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/mapGeometria.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m6 passed[39m[22m[90m (6)[39m
+[2m      Tests [22m [1m[32m11 passed[39m[22m[90m (11)[39m
+[2m   Start at [22m 17:56:28
+[2m   Duration [22m 2.51s[2m (transform 140ms, setup 0ms, collect 708ms, tests 199ms, environment 1ms, prepare 562ms)[22m
+

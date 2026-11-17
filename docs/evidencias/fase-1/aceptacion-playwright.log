@@ -1,0 +1,6 @@
+
+Running 2 tests using 1 worker
+
+[1/2] tests\acceptance\ficha-mapa.spec.ts:3:1 › HU-01 y HU-02 se ven en escritorio y móvil
+[2/2] tests\acceptance\ficha-mapa.spec.ts:39:1 › la ficha se recorre con teclado y el foco es visible
+  2 passed (5.1s)
