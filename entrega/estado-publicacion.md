@@ -227,7 +227,7 @@ El enlace único será la URL de `mi-barrio-entrega`. No se debe entregar hasta 
 Verificación local ejecutada el 2026-11-16:
 
 - [x] Todos los enlaces relativos del README existen: **19 enlaces, 0 roto**.
-- [x] No hay URLs de GitHub sin confirmar: no se encontró ningún `github.com`.
+- [x] No hay URLs de GitHub sin confirmar: no se encontró ningún dominio de GitHub en el README ni en los documentos de entrega.
 - [x] No hay datos territoriales presentados con el nivel territorial incorrecto: UPZ y localidad están separados del barrio.
 - [x] No se afirma que los submódulos ya estén configurados: el README usa un marcador `<URL_DE_ESTE_REPOSITORIO>` y no incluye `.gitmodules`.
 - [x] El README no contiene credenciales ni secretos: la búsqueda de patrones no encontró tokens, claves ni contraseñas.
