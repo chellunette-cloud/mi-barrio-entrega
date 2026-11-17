@@ -84,7 +84,7 @@ Preparado localmente, sin remoto:
 |---|---|
 | Repositorio Git local | Inicializado en `main` |
 | Commit inicial | `2577ba93edfb2e77f7e8d485310db2d28325c354` |
-| HEAD actual | `1156905` (5 commits locales) |
+| Historial | Commits locales en `main`; consultar `git log` |
 | Archivos versionados | 78 |
 | README principal en español | Sí |
 | Copia de documentación y evidencias | Sí: 72 archivos, incluida la Fase 11.2 |
