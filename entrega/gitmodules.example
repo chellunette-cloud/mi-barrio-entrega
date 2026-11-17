@@ -1,7 +1,7 @@
 # Plantilla ilustrativa de .gitmodules
 #
 # NO renombrar manualmente a .gitmodules.
-# Usar: pwsh entrega/configurar-submodulos.ps1 -FrontendUrl ... -ApiUrl ... -BackendUrl ...
+# Usar: powershell -NoProfile -ExecutionPolicy Bypass -File entrega\configurar-submodulos.ps1 -FrontendUrl ... -ApiUrl ... -BackendUrl ...
 # Requiere que los tres remotos existan y tengan al menos un commit.
 
 [submodule "mi-barrio-frontend"]
