@@ -2,7 +2,7 @@
 
 **Versión 1.0 — 2026-11-22**
 
-Esta guía describe la arquitectura de despliegue **propuesta** y los pasos de verificación posteriores. Después de su redacción, el sistema **sí fue desplegado** en Render con planes Free, sin dominio propio ni red privada, y con P0-01 NO APROBADO; véase [`../despliegue/evidencia-fase-15.2-despliegue-render.md`](../despliegue/evidencia-fase-15.2-despliegue-render.md). El portal de entrega se publicó el 2026-11-23 en <https://chellunette-cloud.github.io/mi-barrio-entrega/>; véase `entrega/estado-publicacion.md` §9.
+Esta guía describe la arquitectura de despliegue **propuesta** y los pasos de verificación posteriores. Después de su redacción, el sistema **sí fue desplegado** en Render con planes Free, sin dominio propio ni red privada; P0-01 quedó aprobado en Fase 15.3. Véase [`../despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md`](../despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md). El portal de entrega se publicó el 2026-11-23 en <https://chellunette-cloud.github.io/mi-barrio-entrega/>; véase `entrega/estado-publicacion.md` §9.
 
 ---
 

@@ -1,5 +1,7 @@
 # Evidencia Fase 15.1.4 — Validación definitiva de P0-01 (rate limit por IP real)
 
+> **Registro histórico.** El estado `NO APROBADO` corresponde al cierre de esa fase. El 2026-11-23 la Fase 15.3 corrigió la clave del limitador y aprobó P0-01 con evidencia en Render; véase [`evidencia-fase-15.3-correccion-p0-01-y-secciones.md`](evidencia-fase-15.3-correccion-p0-01-y-secciones.md).
+
 ## 1. Identificación
 
 - Fecha/hora local: 2026-11-22T22:07:08-05:00 a 2026-11-22T22:11:45-05:00
@@ -98,7 +100,7 @@ Ruta: `GET https://mi-barrio-static-p0.onrender.com/api/v1/health` (rewrite `/ap
 
 ## 7. Conclusión
 
-P0-01 **no debe aprobarse** para despliegue a producción con el estado actual. La implementación local y el commit `b9080ea` son correctos en el entorno de pruebas (6/6 pruebas de proxy en local), pero en Render la clave del limitador no sigue la IP sintética proporcionada: se fragmenta en varios contadores y se comparte entre IPs distintas dentro de la misma ventana. El comportamiento observado es compatible con que `req.ip` esté resolviendo a una dirección de la capa de proxy y no a la IP real del cliente; con `trust proxy=1` no se puede afirmar lo contrario. El commit permanece publicado en `origin/fase-15/p0-trust-proxy` y no se ha modificado.
+P0-01 **no debía aprobarse** para despliegue a producción con el estado de esa fase. La implementación local y el commit `b9080ea` eran correctos en el entorno de pruebas (6/6 pruebas de proxy en local), pero en Render la clave del limitador no seguía la IP sintética proporcionada: se fragmentaba en varios contadores y se compartía entre IPs distintas dentro de la misma ventana. El comportamiento observado era compatible con que `req.ip` resolviera a una dirección de la capa de proxy y no a la IP real del cliente; con `trust proxy=1` no se podía afirmar lo contrario. El commit permanece publicado en `origin/fase-15/p0-trust-proxy` y no se ha modificado. Esta conclusión quedó superada por la Fase 15.3 (véase la nota al inicio).
 
 ## 8. Limitaciones
 

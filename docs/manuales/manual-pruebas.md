@@ -163,7 +163,7 @@ Los archivos de Fase 12.1, 13, 14 y 14.7 están presentes en `docs/evidencias/` 
 | PT-01 | Pendiente | Sin evidencia formal de cierre. |
 | PT-02 | Pendiente | Sin evidencia formal de cierre. |
 | Auditoría formal de accesibilidad | Pendiente | Existe revisión interna, no auditoría formal. |
-| Staging HTTPS y despliegue | Despliegue Free ejecutado; staging con dominio propio pendiente | Render sin dominio propio ni red privada; P0-01 NO APROBADO. Véase `docs/despliegue/evidencia-fase-15.2-despliegue-render.md`. |
+| Staging HTTPS y despliegue | Despliegue Free ejecutado; staging con dominio propio pendiente | Render sin dominio propio ni red privada; P0-01 aprobado en Fase 15.3. Véase `docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md`. |
 | Respaldos/restauración | Pendiente | No hay scripts en los repositorios. |
 
 ---

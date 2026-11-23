@@ -6,7 +6,7 @@
 **Revisión 1.2 (2026-11-15):** HU-01 y HU-02 pasan a `En pruebas` con evidencia real de Fase 1. Las demás siguen `Registrada`; no hay historias `Validadas` ni `Desplegadas`.
 **Revisión 1.3 (2026-11-22):** se añade la §2.1 con los **criterios de aceptación aprobados en la matriz canónica**. No cambian IDs, criterios ni los estados históricos de las revisiones anteriores.
 Estados permitidos: `Registrada` → `En análisis` → `Aprobada` → `En desarrollo` → `En pruebas` → `Validada` → `Desplegada`.
-**Estado vigente:** ver §2.1. El sistema está desplegado en Render desde la Fase 15.2 con P0-01 NO APROBADO y P0-02 aprobado para la integridad consultada; no se declara aceptación académica.
+**Estado vigente:** ver §2.1. El sistema está desplegado en Render desde la Fase 15.2 con P0-01 APROBADO en Fase 15.3 y P0-02 aprobado para la integridad consultada; no se declara aceptación académica.
 
 ---
 

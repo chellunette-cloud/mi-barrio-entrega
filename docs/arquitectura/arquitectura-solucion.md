@@ -2,7 +2,7 @@
 
 **Versión:** 1.2 · **Fecha:** 2026-11-22
 
-> **Estado vigente a 23 de noviembre de 2026:** D-2…D-7 aprobadas; D-7 implementada con evidencia técnica; Fases 1–14.7 ejecutadas y despliegue gratuito en Render ejecutado en Fase 15.2. La matriz canónica de Fase 13 registra 46/46 criterios aprobados acumulados y el run E2E remoto `44979541605` es regresión, no ejecución individual de los 46. **P0-01 NO APROBADO; P0-02 aprobado para la integridad consultada. Siguen pendientes PT-01, PT-02, auditoría WCAG formal y aceptación académica.** La versión 1.1 (2026-11-15) registraba D-7 pendiente y Fase 1 en pruebas; se conserva como registro histórico. Ver [`../despliegue/evidencia-fase-15.2-despliegue-render.md`](../despliegue/evidencia-fase-15.2-despliegue-render.md).
+> **Estado vigente a 23 de noviembre de 2026:** D-2…D-7 aprobadas; D-7 implementada con evidencia técnica; Fases 1–14.7 ejecutadas y despliegue gratuito en Render ejecutado en Fase 15.2. La matriz canónica de Fase 13 registra 46/46 criterios aprobados acumulados y el run E2E remoto `44979541605` es regresión, no ejecución individual de los 46. **P0-01 APROBADO en Fase 15.3; P0-02 aprobado para la integridad consultada. Siguen pendientes documentación final, PT-01, PT-02, auditoría WCAG formal y aceptación académica.** La versión 1.1 (2026-11-15) registraba D-7 pendiente y Fase 1 en pruebas; se conserva como registro histórico. Ver [`../despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md`](../despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md).
 **Alcance:** organización arquitectónica que debe soportar las 13 historias de usuario.
 
 ---

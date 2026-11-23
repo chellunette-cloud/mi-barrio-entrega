@@ -11,7 +11,8 @@
 | [`comparacion-alternativas.md`](comparacion-alternativas.md) | Alternativas de alojamiento con fuentes oficiales y límites verificados o pendientes | **Pendiente de decisión externa** |
 | [`plan-por-etapas.md`](plan-por-etapas.md) | Once etapas con prerrequisitos, acciones, verificaciones, aceptación y reversión | **Propuesto** / **Pendiente de ejecución** |
 | [`respaldo-observabilidad.md`](respaldo-observabilidad.md) | Respaldo, restauración, logs, health checks, alertas y recuperación propuestos | **Propuesto** / **Pendiente de ejecución** |
-| [`evidencia-fase-15.2-despliegue-render.md`](evidencia-fase-15.2-despliegue-render.md) | Despliegue real, configuración, migraciones, ETL, P0-01 y P0-02 | **Ejecutado y verificado**; P0-01 NO APROBADO |
+| [`evidencia-fase-15.3-correccion-p0-01-y-secciones.md`](evidencia-fase-15.3-correccion-p0-01-y-secciones.md) | Corrección de P0-01, error cacheado de las secciones y verificación final | **Ejecutado y verificado**; P0-01 APROBADO |
+| [`evidencia-fase-15.2-despliegue-render.md`](evidencia-fase-15.2-despliegue-render.md) | Despliegue real, configuración, migraciones, ETL, P0-01 y P0-02 | **Ejecutado y verificado**; P0-01 NO APROBADO en esa fecha |
 
 ## Convención de estados
 

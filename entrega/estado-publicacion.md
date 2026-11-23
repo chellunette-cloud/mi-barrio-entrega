@@ -13,22 +13,22 @@ Los tres repositorios de código están publicados en `main`. Remotos y HEADs ve
 
 | Repositorio | Remoto `origin` verificado | HEAD vigente |
 |---|---|---|
-| `mi-barrio-frontend` | `https://github.com/chellunette-cloud/mi-barrio-frontend.git` | `main` / `11aa254ef826ca20367deb4a689123e4ed8a90b8` |
-| `mi-barrio-api` | `https://github.com/chellunette-cloud/mi-barrio-api.git` | `fase-15/p0-trust-proxy` / `39684bce72bda72b3d23ba1d3db0724877a97b88` |
+| `mi-barrio-frontend` | `https://github.com/chellunette-cloud/mi-barrio-frontend.git` | `main` / `4237608525a8df3cbc033aa11376772564f68294` |
+| `mi-barrio-api` | `https://github.com/chellunette-cloud/mi-barrio-api.git` | `fase-15/p0-trust-proxy` / `0661782534b979f2497add5402fc2a3c3f3f4091` |
 | `mi-barrio-backend` | `https://github.com/chellunette-cloud/mi-barrio-backend.git` | `main` / `a6c912542873665659fff4a38c1efdd5f13483be` |
 
 **Hashes vigentes de contratos:** interno `ab080fd08eba86aa90d2217ffcc1c3e9bd2e8223a542cc9348c5861e8cb181e2`, público `a2ed68fa2826ef8de7e9ffff9be68f9e8903b2ba5021ed04297ca0848903029e`.  
 **Hashes históricos conservados:** Fase 11.2 interno `338f3cbe3a7591d09691c0e05ae43bab8783faac1511d22408eb67e05d0f8ddc`, público `af9cda5b6ae3cdad59593ac5dd4abf9d3ca3c2550ee672484ac952ed88b5232e`; Fase 12 interno `606a25436e23c4964f44153acc545b4dcb947801ffc726aa1aaf0f565c15a84c`, público `c1602756c9eb7edf98695da489856f76387f3d62874e13e5ce89a1ed461aed59`.
 
-`main` de la API permanece en `40c92fb2651ad31f7d33f9c14e0abc0ff976f9dd`; el SHA desplegado conserva `b9080ea` como antecesor.
+`main` de la API permanece en `40c92fb2651ad31f7d33f9c14e0abc0ff976f9dd`; el SHA desplegado conserva `b9080ea` y `39684bc` como antecesores.
 
-**Despliegue real (2026-11-23, Fase 15.2):** cuatro servicios Free en Render, USD 0, sin tarjeta. Frontend `https://mi-barrio-frontend.onrender.com`, API `https://mi-barrio-api-8bn3.onrender.com`, backend `https://mi-barrio-backend-6jp2.onrender.com` y PostgreSQL/PostGIS de 1 GB con expiración el 2026-12-22. Endpoints, mapa, ETL y datos verificados; **P0-02 aprobado para la integridad consultada; P0-01 NO APROBADO**. Detalle en [`docs/despliegue/evidencia-fase-15.2-despliegue-render.md`](../docs/despliegue/evidencia-fase-15.2-despliegue-render.md).
+**Despliegue real (2026-11-23, Fase 15.2):** cuatro servicios Free en Render, USD 0, sin tarjeta. Frontend `https://mi-barrio-frontend.onrender.com`, API `https://mi-barrio-api-8bn3.onrender.com`, backend `https://mi-barrio-backend-6jp2.onrender.com` y PostgreSQL/PostGIS de 1 GB con expiración el 2026-12-22. Endpoints, mapa, ETL y datos verificados; **P0-02 aprobado para la integridad consultada; P0-01 NO APROBADO en esa fecha**. El 2026-11-23 se ejecutó la Fase 15.3: **P0-01 APROBADO con evidencia desplegada** y secciones públicas verificadas en 200. Detalle en [`docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md`](../docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md) y registro histórico en [`docs/despliegue/evidencia-fase-15.2-despliegue-render.md`](../docs/despliegue/evidencia-fase-15.2-despliegue-render.md).
 
 **Publicación del portal (2026-11-23, §9):** repositorio público independiente `chellunette-cloud/mi-barrio-entrega`, GitHub Pages activo en `main` / raíz. Enlace único del portal: <https://chellunette-cloud.github.io/mi-barrio-entrega/>. La aplicación sigue en <https://mi-barrio-frontend.onrender.com>; son direcciones distintas.
 
 La matriz canónica registra **46/46 criterios aprobados** ([`docs/evidencias/fase-13/matriz-global-46-criterios.md`](../docs/evidencias/fase-13/matriz-global-46-criterios.md)). El E2E remoto `44979541605` terminó en `success` con **36/36 pruebas en 15 archivos** ([`docs/evidencias/fase-14-7/ejecucion-e2e-remota.md`](../docs/evidencias/fase-14-7/ejecucion-e2e-remota.md)). Es regresión remota de los criterios cubiertos, no ejecución individual de los 46 criterios ni despliegue. Ambas rutas están físicamente presentes en este portal y enlazadas desde [`docs/README.md`](../docs/README.md); los archivos figuran como `untracked` en `git status` y su incorporación a Git y revisión siguen pendientes.
 
-Los seis manuales están disponibles en `mi-barrio-entrega/docs/manuales/` y enlazados desde el README raíz y desde `entrega/README.md`. **Publicación del portal resuelta (§4 y §9):** URL definitiva <https://chellunette-cloud.github.io/mi-barrio-entrega/>, repositorio público `chellunette-cloud/mi-barrio-entrega`, Pages desde `main` / raíz, clon y enlaces verificados; enlace único entregado. La copia de `docs/` quedó en el mismo repositorio del portal, sin cuarto repositorio. Las plantillas `.env.example` de los repositorios de código se revisaron sin encontrar secretos reales. No se solicitó autorización ni registro de submódulos: la opción C los excluye y el portal usa el [manifiesto de versiones](manifiesto-versiones.md). **Despliegue de la aplicación (ejecutado el 2026-11-23, §8):** configuración de producción aplicada en Render y servicios verificados; CORS queda definido por `FRONTEND_ORIGIN`, con backends internos protegidos por token. **Pendientes de despliegue:** respaldos/restauración y corrección/revalidación de P0-01. **Pendientes de verificación final y sustentación:** entrega final, trazabilidad final, verificaciones finales, PT-01, PT-02 y la auditoría formal de accesibilidad (los tres últimos permanecen sin evidencia de cierre). La documentación final de los seis documentos canónicos ya está sincronizada en el portal; queda pendiente su entrega académica. Las secciones 1 y 2 conservan el registro original de preparación de 2026-11-16; §3 distingue ese registro del estado actual del portal; §§4–7 reflejan las decisiones pendientes, las verificaciones vigentes y el resumen actualizado.
+Los seis manuales están disponibles en `mi-barrio-entrega/docs/manuales/` y enlazados desde el README raíz y desde `entrega/README.md`. **Publicación del portal resuelta (§4 y §9):** URL definitiva <https://chellunette-cloud.github.io/mi-barrio-entrega/>, repositorio público `chellunette-cloud/mi-barrio-entrega`, Pages desde `main` / raíz, clon y enlaces verificados; enlace único entregado. La copia de `docs/` quedó en el mismo repositorio del portal, sin cuarto repositorio. Las plantillas `.env.example` de los repositorios de código se revisaron sin encontrar secretos reales. No se solicitó autorización ni registro de submódulos: la opción C los excluye y el portal usa el [manifiesto de versiones](manifiesto-versiones.md). **Despliegue de la aplicación (ejecutado el 2026-11-23, §8):** configuración de producción aplicada en Render y servicios verificados; CORS queda definido por `FRONTEND_ORIGIN`, con backends internos protegidos por token. **Pendientes de despliegue:** respaldos/restauración; P0-01 quedó corregido y revalidado en la Fase 15.3 (§10). **Pendientes de verificación final y sustentación:** entrega final, trazabilidad final, verificaciones finales, PT-01, PT-02 y la auditoría formal de accesibilidad (los tres últimos permanecen sin evidencia de cierre). La documentación final de los seis documentos canónicos ya está sincronizada en el portal; queda pendiente su entrega académica. Las secciones 1 y 2 conservan el registro original de preparación de 2026-11-16; §3 distingue ese registro del estado actual del portal; §§4–7 reflejan las decisiones pendientes, las verificaciones vigentes y el resumen actualizado.
 
 ---
 
@@ -225,7 +225,7 @@ Enlace único del portal: <https://chellunette-cloud.github.io/mi-barrio-entrega
 | URLs de GitHub inventadas | Ninguna |
 | Push/publicación de los repositorios de código | Realizado; véase §0 |
 | Push/publicación del portal `mi-barrio-entrega` | Realizado el 2026-11-23; repo público y Pages activo (§9) |
-| Despliegue de la aplicación | Realizado en Render el 2026-11-23; P0-01 NO APROBADO, P0-02 aprobado para los datos consultados |
+| Despliegue de la aplicación | Realizado en Render el 2026-11-23; P0-01 APROBADO en Fase 15.3, P0-02 aprobado para los datos consultados |
 
 > Revisión de las plantillas de los tres repositorios de código (2026-11-22): no se encontraron valores secretos reales; las plantillas contienen marcadores, puertos y ejemplos locales (`localhost`). No se imprimieron ni copiaron valores. Se conserva la precaución de revisar cualquier cambio futuro de `.env.example` y de no publicar archivos `.env`.
 
@@ -256,7 +256,7 @@ Verificación local ejecutada el 2026-11-16; **reverificada el 2026-11-22** (26 
 | ¿El portal está preparado y publicado? | **Sí**, con documentación sincronizada, remoto `origin` y GitHub Pages activo (§9). |
 | ¿El portal usa submódulos? | **No**; opción C, sin `.gitmodules` ni gitlinks. |
 | ¿Se publicó algo? | **Sí**: los tres repositorios de código, la aplicación en Render con planes Free y el portal en GitHub Pages. |
-| ¿La aplicación está desplegada? | **Sí**, desde el 2026-11-23, con USD 0; P0-01 NO APROBADO y P0-02 aprobado para la integridad de datos consultada. Véase §8. |
+| ¿La aplicación está desplegada? | **Sí**, desde el 2026-11-23, con USD 0; P0-01 APROBADO en la Fase 15.3 y P0-02 aprobado para la integridad de datos consultada. Véanse §8 y §10. |
 | ¿Cuál es el enlace único? | <https://chellunette-cloud.github.io/mi-barrio-entrega/>. No se registran submódulos (opción C). |
 
 ---
@@ -264,10 +264,10 @@ Verificación local ejecutada el 2026-11-16; **reverificada el 2026-11-22** (26 
 ## 8. Despliegue real en Render (2026-11-23)
 
 - Cuatro servicios Free sin tarjeta: PostgreSQL 16/PostGIS, backend, API y Static Site. Facturación USD 0; 4/25 servicios y 0,45/750 horas Free.
-- SHAs desplegados: frontend `11aa254`, API `39684bc` en `fase-15/p0-trust-proxy`, backend `a6c9125` en `main`. No se generaron commits nuevos ni force pushes.
+- SHAs desplegados en esa fecha: frontend `11aa254`, API `39684bc` en `fase-15/p0-trust-proxy`, backend `a6c9125` en `main`. No se generaron commits nuevos ni force pushes. La Fase 15.3 (§10) publicó posteriormente `4237608` y `0661782` sin force pushes.
 - Migraciones y ETL se ejecutaron desde el Build Command del backend porque `Pre-Deploy Command` está bloqueado en Free. Se creó la extensión PostGIS directamente en la BD desplegada, sin cambios de código.
 - Verificación real: health, ficha, geometría, categorías, 376 lugares, 463 vías y estadísticas responden `200` a través del rewrite del frontend; el mapa y el catálogo cargan datos reales.
-- P0-01: `/internal/v1/diagnostico-ip` mostró `trustProxy=1` y varios `req.ip` internos para una misma IP sintética. **NO APROBADO**.
+- P0-01 (registro histórico de esa fecha): `/internal/v1/diagnostico-ip` mostró `trustProxy=1` y varios `req.ip` internos para una misma IP sintética. **NO APROBADO** entonces; corregido y aprobado en la Fase 15.3 (§10).
 - P0-02: 34/34 manzanas estrato 2 dentro del polígono, 58 vértices, 9,10 ha, 94.551,13 m², 705 lotes, 3.807 habitantes, 5 categorías, 376 lugares, 463 vías y 7 fuentes. **APROBADO para la integridad consultada**.
 - Limitaciones: red privada no disponible en Free, backend público protegido por token, instancias que se apagan por inactividad, BD de 1 GB que expira el 2026-12-22 sin backups, y PostGIS 3.6.2 en Render frente a 3.7.0 local.
 - Evidencia completa: [`docs/despliegue/evidencia-fase-15.2-despliegue-render.md`](../docs/despliegue/evidencia-fase-15.2-despliegue-render.md).
@@ -289,4 +289,15 @@ Verificación local ejecutada el 2026-11-16; **reverificada el 2026-11-22** (26 
 
 **Comprobaciones previas:** búsqueda de patrones de secretos en todo el árbol (sin coincidencias de valores reales), ausencia de `.env`, `*.pem`, `*.key` y `id_rsa`, y verificación de que el destino GitHub estaba libre antes de crearlo. **Comprobaciones posteriores:** clon fresco del repositorio, resolución de la URL de Pages y enlaces del `index.html` a la documentación y a la aplicación.
 
-> Esta sección registra solo la publicación documental. No cambia el estado de P0-01 (NO APROBADO), P0-02 (aprobado para la integridad consultada) ni la ausencia de aceptación académica.
+> Esta sección registra solo la publicación documental. No cambia P0-02 (aprobado para la integridad consultada) ni la ausencia de aceptación académica; P0-01 fue corregido y aprobado después, en la Fase 15.3 (§10).
+
+---
+
+## 10. Fase 15.3 — corrección final de P0-01 y de las secciones (2026-11-23)
+
+- Causa de P0-01: Render añade `X-Forwarded-For` sin limpiar lo que envía el cliente; con `trust proxy=1`, `req.ip` caía en hops internos y fragmentaba el contador. Corrección: clave del limitador derivada de `CF-Connecting-IP`, cabecera controlada por Cloudflare y validada con `isIP`; `trust proxy` sigue en `1`.
+- Evidencia desplegada: `clientIpSource=cf-connecting-ip`, IP efectiva estable ante XFF sintéticos, `CF-Connecting-IP` falsificada rechazada con 403, contador compartido por el mismo cliente (`remaining` 119→118→117) y 404 con `no-store`. Pruebas de integración: 32/32 en API (5 nuevas de IP/proxy).
+- Causa de las secciones: 502 del backend durante arranque en frío se cachearon con `public, max-age=300`; el navegador sirvió ese error aunque la API ya respondía 200. Corrección: `no-store` en errores/429/404 y reintentos 1/3/6 s ante 502/503/504 en el frontend.
+- Validación pública: diez llamadas iniciales en 200, consola sin errores, mapa con 827 `path`, 463 vías, catálogo y filtros operativos, navegación `#inicio`/`#historia`/`#explorar`/`#buscar`. CI verde en los dos repositorios modificados.
+- Versiones definitivas: API `0661782534b979f2497add5402fc2a3c3f3f4091` (`fase-15/p0-trust-proxy`), frontend `4237608525a8df3cbc033aa11376772564f68294` (`main`), backend sin cambios `a6c912542873665659fff4a38c1efdd5f13483be`.
+- Detalle completo: [`docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md`](../docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md).

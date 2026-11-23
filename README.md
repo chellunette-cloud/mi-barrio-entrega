@@ -2,7 +2,7 @@
 
 Portal de entrega académica del proyecto **Mi Barrio — Ciudad Granada**. Este repositorio principal reúne la documentación y referencia los tres repositorios independientes del sistema mediante enlaces HTTPS y el manifiesto de versiones, sin submódulos ni monorepo.
 
-> **Estado vigente (2026-11-23):** despliegue gratuito en Render **ejecutado y verificado** (frontend, API, backend y PostgreSQL/PostGIS; costo USD 0). La matriz canónica registra **46/46 criterios aprobados** y el E2E remoto (`44979541605`) finalizó en `success` con **36/36 pruebas en 15 archivos**. El frontend y el backend están en `main`; la API se desplegó desde `fase-15/p0-trust-proxy`. **P0-01 permanece NO APROBADO**: la IP del cliente no gobierna el limitador de tasa en Render. No se declara aceptación académica. Evidencia: [`docs/despliegue/evidencia-fase-15.2-despliegue-render.md`](docs/despliegue/evidencia-fase-15.2-despliegue-render.md).
+> **Estado vigente (2026-11-23):** despliegue gratuito en Render **ejecutado y verificado** (frontend, API, backend y PostgreSQL/PostGIS; costo USD 0). La matriz canónica registra **46/46 criterios aprobados** y el E2E remoto (`44979541605`) finalizó en `success` con **36/36 pruebas en 15 archivos**. Tras la Fase 15.3, frontend y backend están en `main` y la API en `fase-15/p0-trust-proxy`, con despliegue automático verificado. **P0-01 APROBADO con evidencia en Render** y **P0-02 aprobado para la integridad de datos consultada**; las diez llamadas de la carga inicial y todas las secciones públicas responden 200 sin errores de consola. No se declara aceptación académica. Evidencia: [`docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md`](docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md).
 
 > **Enlaces públicos (no confundir):**
 >
@@ -118,11 +118,11 @@ mi-barrio-entrega/
 
 | Repositorio | Remoto `origin` verificado | HEAD vigente en `main` |
 |---|---|---|
-| `mi-barrio-frontend` | `https://github.com/chellunette-cloud/mi-barrio-frontend.git` | `main` / `11aa254ef826ca20367deb4a689123e4ed8a90b8` |
-| `mi-barrio-api` | `https://github.com/chellunette-cloud/mi-barrio-api.git` | `fase-15/p0-trust-proxy` / `39684bce72bda72b3d23ba1d3db0724877a97b88` |
+| `mi-barrio-frontend` | `https://github.com/chellunette-cloud/mi-barrio-frontend.git` | `main` / `4237608525a8df3cbc033aa11376772564f68294` |
+| `mi-barrio-api` | `https://github.com/chellunette-cloud/mi-barrio-api.git` | `fase-15/p0-trust-proxy` / `0661782534b979f2497add5402fc2a3c3f3f4091` |
 | `mi-barrio-backend` | `https://github.com/chellunette-cloud/mi-barrio-backend.git` | `main` / `a6c912542873665659fff4a38c1efdd5f13483be` |
 
-Estos remotos, ramas y HEADs fueron verificados en los repositorios locales y contra `git ls-remote origin`. `main` de la API sigue en `40c92fb2651ad31f7d33f9c14e0abc0ff976f9dd`; el commit desplegado conserva `b9080ea` como antecesor. El portal no usa submódulos: no existe `.gitmodules` ni gitlinks; las versiones de referencia se registran en el manifiesto.
+Estos remotos, ramas y HEADs fueron verificados en los repositorios locales y contra `git ls-remote origin` el 2026-11-23. `main` de la API sigue en `40c92fb2651ad31f7d33f9c14e0abc0ff976f9dd`; el SHA desplegado conserva `b9080ea` y `39684bc` como antecesores. El portal no usa submódulos: no existe `.gitmodules` ni gitlinks; las versiones de referencia se registran en el manifiesto.
 
 El [manifiesto de versiones del portal](entrega/manifiesto-versiones.md) registra de forma documental estos repositorios, sus SHAs y los hashes de los contratos, sin crear submódulos.
 
@@ -282,7 +282,7 @@ npm run test:acceptance
 |---:|---:|---:|---:|---:|
 | 46 | 46 | 0 | 0 | 0 |
 
-La validación remota (`44979541605`, `success`, 36/36 en 15 archivos) es evidencia de regresión de los criterios cubiertos, no ejecución individual de los 46. Los cuatro servicios desplegados están activos, el ETL cargó 376 lugares y 463 vías, y la API responde a través del rewrite del frontend. **P0-02 queda aprobado para la integridad de datos consultada; P0-01 queda NO APROBADO** porque `req.ip` no corresponde a la IP del cliente. Los seis manuales están disponibles en la §12. El portal de documentación fue publicado en GitHub Pages y su enlace único es <https://chellunette-cloud.github.io/mi-barrio-entrega/>. Pendientes reales: **corrección y revalidación de P0-01**, **documentación final de entrega**, **entrega final**, **aceptación académica**, **trazabilidad final**, **respaldos/restauración** y **verificaciones finales**. PT-01, PT-02 y la auditoría formal de accesibilidad permanecen sin evidencia de cierre. Ver [`docs/despliegue/evidencia-fase-15.2-despliegue-render.md`](docs/despliegue/evidencia-fase-15.2-despliegue-render.md).
+La validación remota (`44979541605`, `success`, 36/36 en 15 archivos) es evidencia de regresión de los criterios cubiertos, no ejecución individual de los 46. Los cuatro servicios desplegados están activos, el ETL cargó 376 lugares y 463 vías, y la API responde a través del rewrite del frontend. **P0-02 queda aprobado para la integridad de datos consultada; P0-01 queda APROBADO** tras usar `CF-Connecting-IP` como clave del limitador y verificarlo en Render (IP efectiva estable, XFF manipulado sin efecto y cabecera CF falsificada rechazada con 403). Los seis manuales están disponibles en la §12. El portal de documentación fue publicado en GitHub Pages y su enlace único es <https://chellunette-cloud.github.io/mi-barrio-entrega/>. Pendientes reales: **documentación final de entrega**, **entrega final**, **aceptación académica**, **trazabilidad final**, **respaldos/restauración** y **verificaciones finales**. PT-01, PT-02 y la auditoría formal de accesibilidad permanecen sin evidencia de cierre. Ver [`docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md`](docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md).
 
 ### 10.2 Registro histórico (2026-11-16, Fase 11.2)
 
@@ -328,7 +328,7 @@ Los **10 criterios restantes** pertenecen a HU-03 a HU-06 y no se declaran aprob
 
 **Ejecutadas y verificadas (Fases 14.7 y 15.2):** E2E remoto `44979541605` en `success` (**36/36** pruebas en **15** archivos, job `playwright` correcto y artefacto `playwright-report` verificado), remotos/HEADs confirmados y despliegue real en Render con servicios, endpoints, mapa, ETL y datos verificados. Esto es regresión remota más evidencia de despliegue; **no** equivale a cierre de las verificaciones formales ni a aceptación académica.
 
-Los manuales de usuario, técnico, instalación, operación, pruebas y despliegue están disponibles en la §12. **Sigue pendiente sin evidencia de cierre:** corrección y revalidación de **P0-01**, auditoría formal de accesibilidad, prueba formal de rendimiento **PT-01**, pruebas formales **PT-02**, respaldos/restauración, documentación final de entrega, trazabilidad final y verificaciones finales. La publicación del portal y el enlace único ya están resueltos. La red privada y el backend no expuesto no están disponibles en el plan Free aplicado; véase la limitación registrada en la §3 y en la evidencia de despliegue.
+Los manuales de usuario, técnico, instalación, operación, pruebas y despliegue están disponibles en la §12. **P0-01 quedó corregido y revalidado con evidencia en Render (Fase 15.3).** **Sigue pendiente sin evidencia de cierre:** auditoría formal de accesibilidad, prueba formal de rendimiento **PT-01**, pruebas formales **PT-02**, respaldos/restauración, documentación final de entrega, trazabilidad final y verificaciones finales. La publicación del portal y el enlace único ya están resueltos. La red privada y el backend no expuesto no están disponibles en el plan Free aplicado; véase la limitación registrada en la §3 y en la evidencia de despliegue.
 
 **Registro histórico (Fase 11.2):** en su momento se listaron como pendientes la auditoría formal de accesibilidad, **PT-01**, **PT-02**, el despliegue en staging con HTTPS, la ejecución remota de GitHub Actions y la publicación de los repositorios y del portal. La ejecución remota y la publicación de los repositorios quedaron cubiertas después; los demás ítems se conservan arriba como pendientes vigentes.
 
@@ -353,7 +353,8 @@ Estas limitaciones están explicadas en [`docs/evidencias/fase-11-2/decisiones-y
 | [`docs/manuales/manual-operacion.md`](docs/manuales/manual-operacion.md) | Health checks, logs, migraciones, errores, seguridad y recuperación |
 | [`docs/manuales/manual-pruebas.md`](docs/manuales/manual-pruebas.md) | Comandos, evidencias, E2E remoto y pruebas pendientes |
 | [`docs/manuales/manual-despliegue.md`](docs/manuales/manual-despliegue.md) | Despliegue propuesto, HTTPS, CORS, red privada y verificaciones |
-| [`docs/despliegue/evidencia-fase-15.2-despliegue-render.md`](docs/despliegue/evidencia-fase-15.2-despliegue-render.md) | Despliegue real en Render, configuración, ETL, P0-01 y P0-02 |
+| [`docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md`](docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md) | Corrección de P0-01, error cacheado de las secciones y verificación final |
+| [`docs/despliegue/evidencia-fase-15.2-despliegue-render.md`](docs/despliegue/evidencia-fase-15.2-despliegue-render.md) | Despliegue real en Render, configuración, ETL, P0-01 y P0-02 (registro histórico) |
 | [`docs/evidencias/fase-11-2/matriz-validacion-final.md`](docs/evidencias/fase-11-2/matriz-validacion-final.md) | Matriz final de validación |
 | [`docs/evidencias/fase-11-2/resultados-regresion.md`](docs/evidencias/fase-11-2/resultados-regresion.md) | CI, builds, contratos, snapshots y Playwright |
 | [`docs/evidencias/fase-11-2/decisiones-y-limitaciones.md`](docs/evidencias/fase-11-2/decisiones-y-limitaciones.md) | Decisiones y limitaciones de la fase |

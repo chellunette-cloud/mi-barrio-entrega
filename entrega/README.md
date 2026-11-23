@@ -22,7 +22,7 @@ Los seis manuales están en [`../docs/manuales/`](../docs/manuales/) como reflej
 - [Guía de pruebas y verificación](../docs/manuales/manual-pruebas.md)
 - [Guía de despliegue y publicación](../docs/manuales/manual-despliegue.md)
 
-> **Estado vigente (2026-11-23):** los tres repositorios tienen remoto verificado; frontend y backend están en `main`, y la API se desplegó desde `fase-15/p0-trust-proxy`. La aplicación está desplegada en Render con planes Free y USD 0, con P0-01 NO APROBADO y P0-02 aprobado para la integridad consultada. El portal es independiente, sin submódulos ni `.gitmodules`, y referencia esas versiones mediante el [manifiesto de versiones](manifiesto-versiones.md). Consulta [`estado-publicacion.md`](estado-publicacion.md) y la [evidencia de despliegue](../docs/despliegue/evidencia-fase-15.2-despliegue-render.md).
+> **Estado vigente (2026-11-23):** los tres repositorios tienen remoto verificado; frontend y backend están en `main`, y la API se desplegó desde `fase-15/p0-trust-proxy`. La aplicación está desplegada en Render con planes Free y USD 0, con P0-01 APROBADO en Fase 15.3 y P0-02 aprobado para la integridad consultada. El portal es independiente, sin submódulos ni `.gitmodules`, y referencia esas versiones mediante el [manifiesto de versiones](manifiesto-versiones.md). Consulta [`estado-publicacion.md`](estado-publicacion.md) y la [evidencia de la Fase 15.3](../docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md).
 >
 > **Enlaces públicos:** aplicación <https://mi-barrio-frontend.onrender.com> · portal de documentación <https://chellunette-cloud.github.io/mi-barrio-entrega/>. No son la misma dirección.
 

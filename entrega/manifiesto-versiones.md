@@ -8,8 +8,8 @@
 
 | Repositorio | URL HTTPS (`origin` configurado) | Rama | SHA completo |
 |---|---|---|---|
-| `mi-barrio-frontend` | `https://github.com/chellunette-cloud/mi-barrio-frontend.git` | `main` | `11aa254ef826ca20367deb4a689123e4ed8a90b8` |
-| `mi-barrio-api` | `https://github.com/chellunette-cloud/mi-barrio-api.git` | `fase-15/p0-trust-proxy` | `39684bce72bda72b3d23ba1d3db0724877a97b88` |
+| `mi-barrio-frontend` | `https://github.com/chellunette-cloud/mi-barrio-frontend.git` | `main` | `4237608525a8df3cbc033aa11376772564f68294` |
+| `mi-barrio-api` | `https://github.com/chellunette-cloud/mi-barrio-api.git` | `fase-15/p0-trust-proxy` | `0661782534b979f2497add5402fc2a3c3f3f4091` |
 | `mi-barrio-backend` | `https://github.com/chellunette-cloud/mi-barrio-backend.git` | `main` | `a6c912542873665659fff4a38c1efdd5f13483be` |
 
 **Método:** `git rev-parse --abbrev-ref HEAD`, `git rev-parse HEAD` y `git remote get-url origin` ejecutados en los tres clones locales. En la preparación de este manifiesto no se ejecutó `git ls-remote`; la comprobación remota posterior se registra en §4.
@@ -28,10 +28,10 @@
 - Este repositorio (`mi-barrio-entrega`) es un **portal documental independiente**: no contiene `.gitmodules`, no declara submódulos ni gitlinks y no tiene remoto Git configurado.
 - Los tres repositorios de código son independientes entre sí. Cada clon local está en `main` y tiene configurado el remoto HTTPS indicado en la sección 1.
 - El manifiesto **asocia documentalmente** la documentación del portal con esas revisiones y esos hashes. No crea una dependencia automática: un cambio de rama, SHA o contrato debe registrarse aquí de manera explícita.
-- El despliegue de la aplicación se ejecutó el 2026-11-23 con estos SHAs; `main` de la API sigue en `40c92fb2651ad31f7d33f9c14e0abc0ff976f9dd` y el SHA desplegado conserva `b9080ea` como antecesor. El portal ya está publicado en <https://chellunette-cloud.github.io/mi-barrio-entrega/>; siguen pendientes la corrección de P0-01, PT-01, PT-02, la auditoría WCAG formal y la aceptación académica. Véase [`estado-publicacion.md`](estado-publicacion.md), el [README del portal](../README.md) y la [evidencia de despliegue](../docs/despliegue/evidencia-fase-15.2-despliegue-render.md).
+- El despliegue de la aplicación se ejecutó el 2026-11-23; los SHAs de la tabla son los definitivos tras la Fase 15.3. `main` de la API sigue en `40c92fb2651ad31f7d33f9c14e0abc0ff976f9dd` y el SHA desplegado conserva `b9080ea` y `39684bc` como antecesores. El portal ya está publicado en <https://chellunette-cloud.github.io/mi-barrio-entrega/>; P0-01 quedó corregido y aprobado con evidencia en Render. Siguen pendientes PT-01, PT-02, la auditoría WCAG formal, respaldos/restauración y la aceptación académica. Véase [`estado-publicacion.md`](estado-publicacion.md), el [README del portal](../README.md) y la [evidencia de la Fase 15.3](../docs/despliegue/evidencia-fase-15.3-correccion-p0-01-y-secciones.md).
 
 ## 4. Verificación
 
-Todos los valores de las secciones 1 y 2 fueron comprobados el **2026-11-22** en los clones locales del workspace y coinciden con los valores registrados en [`estado-publicacion.md`](estado-publicacion.md). No se inventó vigencia remota ni resultado de publicación.
+Todos los valores de las secciones 1 y 2 fueron comprobados el **2026-11-22** en los clones locales del workspace y coinciden con los valores registrados en [`estado-publicacion.md`](estado-publicacion.md). No se inventó vigencia remota ni resultado de publicación. Los SHAs de la sección 1 se actualizaron el **2026-11-23** tras verificar `git rev-parse` y `git ls-remote` de los dos repositorios modificados en la Fase 15.3.
 
 **Comprobación remota adicional (2026-11-22):** la comprobación de solo lectura `git ls-remote origin refs/heads/main` confirmó que los SHA remotos de `refs/heads/main` coinciden con los SHA locales registrados en la sección 1 para los tres repositorios. Los SHA no requirieron cambio. No se modificaron remotos y no se publicó el portal.

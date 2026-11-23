@@ -1,4 +1,7 @@
 # Evidencia Fase 15.2 — Despliegue gratuito en Render y validación real
+
+> **Registro histórico.** Los SHAs y el estado de P0-01 de este documento corresponden al despliegue inicial. El 2026-11-23 se ejecutó la Fase 15.3: P0-01 quedó corregido y aprobado, y las versiones definitivas se registran en [`evidencia-fase-15.3-correccion-p0-01-y-secciones.md`](evidencia-fase-15.3-correccion-p0-01-y-secciones.md).
+
 ## 1. Identificación
 
 - Fecha local: 2026-11-22T23:52 a 2026-11-23T00:10 (GMT-5).
@@ -69,7 +72,7 @@ Protección de servicios: `/internal/v1/health` del backend devolvió **401 sin 
 
 Se usó `/internal/v1/diagnostico-ip` con token de servicio (nunca impreso). Con `X-Forwarded-For: 198.51.100.10`, la API respondió `trustProxy=1` y `req.ip` values `10.196.83.180`, `10.192.19.152`, `10.192.19.152`, `10.196.83.180`, `10.195.14.108` en cinco solicitudes secuenciales. Con `X-Forwarded-For: 203.0.113.20`, `req.ip` fue `10.195.14.108`.
 
-Por tanto, la IP del cliente sintético no gobierna la clave del limitador: la misma IP produjo varios `req.ip` de la capa de proxy y la profundidad de confianza actual (`1`) no alcanza para aislar al cliente detrás de la cadena de Render/edge. El contador de tasa queda fragmentado entre hops internos. **P0-01 permanece NO APROBADO**, igual que en Fase 15.1.4; el endpoint de diagnóstico convierte la inferencia en evidencia directa. No se cambió `trust proxy` ni se suplantaron IPs personales.
+Por tanto, la IP del cliente sintético no gobierna la clave del limitador: la misma IP produjo varios `req.ip` de la capa de proxy y la profundidad de confianza actual (`1`) no alcanza para aislar al cliente detrás de la cadena de Render/edge. El contador de tasa queda fragmentado entre hops internos. **P0-01 quedó NO APROBADO en esa fecha**, igual que en Fase 15.1.4; el endpoint de diagnóstico convirtió la inferencia en evidencia directa. No se cambió `trust proxy` ni se suplantaron IPs personales. La corrección y aprobación posteriores están en [`evidencia-fase-15.3-correccion-p0-01-y-secciones.md`](evidencia-fase-15.3-correccion-p0-01-y-secciones.md).
 ## 8. P0-02 — validación contra la BD desplegada
 
 Consultas directas sobre `mi-barrio-db` (credenciales usadas solo en la sesión local, sin persistirlas):
@@ -93,6 +96,6 @@ Los mismos totales aparecen en la API desplegada y en el ETL. **P0-02 queda APRO
 - Free Postgres: 1 GB, expira el 2026-12-22, sin backups ni pooling. No se validó respaldo/restauración.
 - PostGIS desplegado es 3.6.2 (la documentación local registra 3.7.0); el proyecto usa funciones estándar y el ETL pasó correctamente.
 - El portal `mi-barrio-entrega` se publicó el 2026-11-23 en <https://chellunette-cloud.github.io/mi-barrio-entrega/>; la aplicación está en <https://mi-barrio-frontend.onrender.com>. No se declara aceptación académica.
-- PT-01, PT-02, auditoría formal de accesibilidad, respaldos/restauración y corrección de P0-01 siguen pendientes.
+- PT-01, PT-02, auditoría formal de accesibilidad y respaldos/restauración siguen pendientes; la corrección de P0-01 se ejecutó después en Fase 15.3.
 
 No se modificaron contratos, datos geográficos ni funcionalidades verificadas. Solo cambió la configuración de despliegue en Render y se añadió esta evidencia documental.
