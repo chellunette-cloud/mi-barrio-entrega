@@ -1,12 +1,16 @@
 # Matriz de trazabilidad — requisitos → implementación → pruebas
 
+**Nota de vigencia (2026-11-22):** este documento conserva su contenido histórico de 2026-11-15, incluidas las menciones a «Estado actual» de ese momento. La **matriz vigente** es [`../evidencias/fase-13/matriz-global-46-criterios.md`](../evidencias/fase-13/matriz-global-46-criterios.md), con 46/46 criterios aprobados. La regresión E2E remota de Fase 14.7 se documenta en [`../evidencias/fase-14-7/ejecucion-e2e-remota.md`](../evidencias/fase-14-7/ejecucion-e2e-remota.md). Este aviso no modifica los criterios, sus resultados ni los estados históricos registrados más abajo, y no implica despliegue ni aceptación académica.
+
+> **Estado vigente a 23 de noviembre de 2026:** la trazabilidad vigente es la [matriz canónica de Fase 13](../evidencias/fase-13/matriz-global-46-criterios.md), con **46/46 criterios aprobados acumulados**. Las secciones 1 a 6 conservan el estado de 2026-11-15 y describen la ejecución de Fase 1; sus etiquetas «Estado actual» son históricas. El run remoto de Fase 14.7 (`44979541605`, `success`, 36/36 en 15 archivos) es regresión de los recorridos Playwright y **no ejecutó individualmente los 46 criterios**. El despliegue se ejecutó en Fase 15.2 con P0-01 NO APROBADO y P0-02 aprobado para la integridad consultada; siguen pendientes PT-01, PT-02, auditoría WCAG formal y aceptación académica.
+
 **Versión:** 1.2 · **Fecha:** 2026-11-15
 **Regla:** una historia solo pasa a `Validada` cuando todas sus pruebas asociadas se ejecutaron y la evidencia está enlazada.
 **Revisión 1.1 (2026-11-15):** se incorporan las restricciones de alcance y el método de conteo aplicados; ver §5. No cambiaron IDs ni el número de criterios.
 **Revisión 1.2 (2026-11-15):** HU-01 y HU-02 pasan a `En pruebas` con evidencia real de Fase 1; ver §6. Las demás siguen `Registrada` y no hay historias `Validadas`.
 
 Leyenda de estado: `Registrada` · `En desarrollo` · `En pruebas` · `Validada` · `Bloqueada`.
-Estado actual: **HU-01 y HU-02 en `En pruebas`**; las otras 11 siguen `Registrada`. No hay código ni pruebas de HU-03…HU-13.
+**Estado histórico (2026-11-15):** HU-01 y HU-02 en `En pruebas`; las otras 11 seguían `Registrada` y no había código ni pruebas de HU-03…HU-13 en ese momento.
 
 ---
 
@@ -93,7 +97,7 @@ Estado actual: **HU-01 y HU-02 en `En pruebas`**; las otras 11 siguen `Registrad
 | HU-13 | RF-13 | 5 | 6 | 3 | 401 + CRUD + auditoría | Registrada |
 
 **Cobertura de definición:** 13/13 HU con RF, criterios, módulo, evidencia y prueba previstos.
-**Cobertura de ejecución:** 2/13 en `En pruebas` (HU-01, HU-02); 0/13 `Validadas`. Las pruebas y evidencias ejecutadas están en §6.
+**Cobertura de ejecución histórica (Fase 1, 2026-11-15):** 2/13 en `En pruebas` (HU-01, HU-02); 0/13 `Validadas`. Las pruebas y evidencias ejecutadas en ese momento están en §6. El estado vigente es el aviso «Estado vigente a 22 de noviembre de 2026» y la matriz canónica de Fase 13.
 
 ---
 

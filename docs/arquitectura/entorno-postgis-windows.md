@@ -29,7 +29,7 @@ El runtime es temporal y no se versiona. Los artefactos territoriales que sí se
 Al ejecutar `CREATE EXTENSION postgis`:
 
 ```text
-could not load library C:/.../pg16/extract/pgsql/lib/postgis-3.dll:
+could not load library <RUTA_POSTGIS>/pg16/extract/pgsql/lib/postgis-3.dll:
 The specified module could not be found.
 ```
 

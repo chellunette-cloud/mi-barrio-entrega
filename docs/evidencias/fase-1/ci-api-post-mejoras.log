@@ -25,7 +25,7 @@ OK contrato interno 03873c01e4ef1ed65b0fd7ef629c1a1bbd3b85e53c0f81ade791c7219e23
 > vitest run
 
 
- RUN  v3.2.7 C:/Users/samyl/OneDrive/Documentos/miBarrio/mi-barrio-api
+ RUN  v3.2.7 <WORKSPACE>/mi-barrio-api
 
  ✓ tests/contract/public.test.ts (2 tests) 99ms
  ✓ tests/integration/http.test.ts (3 tests) 47ms

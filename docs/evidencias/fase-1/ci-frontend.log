@@ -25,7 +25,7 @@ OK contrato público fbf6f56cf80eb1cde086ddc0588491e9e1fba3ffc4e20142c3b024983fd
 > vitest run
 
 
-[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/samyl/OneDrive/Documentos/miBarrio/mi-barrio-frontend[39m
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90m<WORKSPACE>/mi-barrio-frontend[39m
 
  [32m✓[39m tests/unit/format.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
  [32m✓[39m tests/integration/BarrioFicha.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 141[2mms[22m[39m

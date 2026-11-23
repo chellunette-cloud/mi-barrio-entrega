@@ -1,6 +1,10 @@
 # Modelo de requisitos — Mi Barrio, Ciudad Granada
 
-**Versión:** 1.2 · **Fecha:** 2026-11-15 · **Estado:** D-2…D-6 aprobadas; D-7 pendiente para la fase administrativa y sin bloqueo para HU-01/HU-02. Fase 1 implementada y en pruebas con HU-01/HU-02; no validada.
+**Versión:** 1.2 · **Fecha:** 2026-11-15
+
+**Estado histórico (2026-11-15):** D-2…D-6 aprobadas; D-7 pendiente para la fase administrativa y sin bloqueo para HU-01/HU-02. Fase 1 implementada y en pruebas con HU-01/HU-02; no validada.
+
+> **Estado vigente a 22 de noviembre de 2026:** D-2…D-7 aprobadas; D-7 implementada con evidencia técnica. Las fases 1–14.7 fueron ejecutadas. La [matriz canónica de Fase 13](../evidencias/fase-13/matriz-global-46-criterios.md) registra 46/46 criterios aprobados acumulados; el run remoto [44979541605](../evidencias/fase-14-7/ejecucion-e2e-remota.md) es regresión y no ejecutó individualmente los 46. No se declara despliegue, PT-01, PT-02, auditoría WCAG formal ni aceptación académica.
 
 Este documento fija los identificadores que usan las 13 historias de usuario, los criterios de aceptación y la matriz de trazabilidad.
 
@@ -77,7 +81,7 @@ Cada RF deriva de una historia de usuario. La historia es la fuente; el RF es su
 | RN-01 | Todo dato territorial publicado debe tener fuente, URL y fecha de consulta. | El registro no se publica. |
 | RN-02 | El polígono del barrio proviene de la capa oficial de la SDP; no se dibuja a mano. | Se bloquea la carga. |
 | RN-03 | Los datos de población por UPZ no se presentan como datos del barrio: se muestran en paneles separados, etiquetados y sin prorrateo. | Se corrige la etiqueta y el nivel territorial. |
-| RN-04 | Un lugar sin coordenadas dentro del área de influencia definida (barrio + 1 km) no se publica. | Se rechaza en validación. |
+| RN-04 | Un lugar sin coordenadas dentro del área de influencia definida no se publica. El radio validado en la implementación es **2.000 m**; la redacción original de 2026-11-15 indicaba «barrio + 1 km» y se conserva como registro histórico (evidencia: `docs/evidencias/fase-11-1/trazabilidad-pruebas.md`, CA-HU13-03). | Se rechaza en validación. |
 | RN-05 | Solo el administrador autenticado puede crear, editar o eliminar lugares. | 401/403. |
 | RN-06 | Toda modificación administrativa queda auditada (quién, qué, cuándo, antes/después). | Se revierte y se registra incidencia. |
 | RN-07 | Los datos de terceros conservan su licencia y atribución; no se relicencian como propios. | Se retira la capa. |

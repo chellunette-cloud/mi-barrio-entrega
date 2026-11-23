@@ -1,6 +1,8 @@
 # Arquitectura de la solución — Mi Barrio, Ciudad Granada
 
-**Versión:** 1.1 · **Fecha:** 2026-11-15 · **Estado:** D-2…D-6 aprobadas; D-7 pendiente para la fase administrativa; Fase 1 implementada y en pruebas con HU-01/HU-02; no validada
+**Versión:** 1.2 · **Fecha:** 2026-11-22
+
+> **Estado vigente a 23 de noviembre de 2026:** D-2…D-7 aprobadas; D-7 implementada con evidencia técnica; Fases 1–14.7 ejecutadas y despliegue gratuito en Render ejecutado en Fase 15.2. La matriz canónica de Fase 13 registra 46/46 criterios aprobados acumulados y el run E2E remoto `44979541605` es regresión, no ejecución individual de los 46. **P0-01 NO APROBADO; P0-02 aprobado para la integridad consultada. Siguen pendientes PT-01, PT-02, auditoría WCAG formal y aceptación académica.** La versión 1.1 (2026-11-15) registraba D-7 pendiente y Fase 1 en pruebas; se conserva como registro histórico. Ver [`../despliegue/evidencia-fase-15.2-despliegue-render.md`](../despliegue/evidencia-fase-15.2-despliegue-render.md).
 **Alcance:** organización arquitectónica que debe soportar las 13 historias de usuario.
 
 ---
@@ -15,9 +17,11 @@
 | D-4 | PostgreSQL 16 + PostGIS 3.7.0 | MySQL 8 · SQLite + SpatiaLite | ✅ **Aprobada (2026-11-15)** | Ver §8; versión local verificada |
 | D-5 | API y Backend se comunican por HTTP interno autenticado | Backend como librería del API | ✅ **Aprobada (2026-11-15)** | Mantiene capas desplegables e independientes; el API no importa código del backend |
 | D-6 | Frontend React + TypeScript + Vite + Tailwind + Leaflet | Next.js · Angular | ✅ **Aprobada (2026-11-15)** | SPA suficiente, mapa ligero, build simple, sin SSR innecesario |
-| D-7 | Autenticación de administrador con JWT corto + refresh + Argon2 | Sesión en servidor · OAuth | 🟡 **Pendiente — fase de administración** | Simple, stateless, compatible con dos servicios; no bloquea HU-01/HU-02 |
+| D-7 | Autenticación de administrador con JWT corto + refresh + Argon2 | Sesión en servidor · OAuth | ✅ **Aprobada e implementada (2026-11-22)** | Simple, stateless, compatible con dos servicios; no bloqueó HU-01/HU-02. Evidencia: `adminAuth.ts`, `JwtService.ts`, `LoginAdmin.ts` y `main.ts` de `mi-barrio-backend`; §4 de [`../evidencias/fase-8/auditoria-integral.md`](../evidencias/fase-8/auditoria-integral.md) y regresión remota de [`../evidencias/fase-14-7/ejecucion-e2e-remota.md`](../evidencias/fase-14-7/ejecucion-e2e-remota.md). No implica despliegue. |
 
-> **Estado de las decisiones (2026-11-15):** D-2…D-6 aprobadas. D-7 queda pendiente para la fase en que se implemente la administración y no bloquea HU-01/HU-02. La Fase 1 está implementada y en pruebas con HU-01/HU-02; los tres repositorios son independientes y tienen commits locales. No se inició la Fase 2 ni se declaró ninguna historia `Validada`.
+> **Estado de las decisiones (2026-11-15, registro histórico):** D-2…D-6 aprobadas. D-7 quedaba pendiente para la fase en que se implemente la administración y no bloquea HU-01/HU-02. La Fase 1 está implementada y en pruebas con HU-01/HU-02; los tres repositorios son independientes y tienen commits locales. No se inició la Fase 2 ni se declaró ninguna historia `Validada`.
+
+> **Estado vigente (2026-11-22):** D-7 pasa de `Pendiente` a `Aprobada e implementada` usando evidencia ya existente, sin inventar resultados ni fechas. D-1 se mantiene documentada implícitamente. El estado histórico de la versión 1.1 se conserva arriba y en la documentación de fases anteriores.
 
 ---
 
@@ -348,4 +352,6 @@ Reglas de persistencia: SRID 4326, índices GiST en `geom` y `punto`, borrado l�
 7. Contrato de error único y códigos estables.
 8. Diagramas y decisiones versionados en `mi-barrio-docs`.
 
-**Estado:** propuesta. No hay componentes implementados.
+**Estado histórico (2026-11-15):** propuesta; en ese momento no había componentes implementados.
+
+**Estado vigente a 22 de noviembre de 2026:** la topología se implementó y validó técnicamente en Fases 1–14.7, pero **no está desplegada**; PT-01, PT-02, la auditoría WCAG formal y la aceptación académica siguen pendientes.

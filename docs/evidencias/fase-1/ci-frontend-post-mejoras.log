@@ -25,7 +25,7 @@ OK contrato público fbf6f56cf80eb1cde086ddc0588491e9e1fba3ffc4e20142c3b024983fd
 > vitest run
 
 
- RUN  v3.2.7 C:/Users/samyl/OneDrive/Documentos/miBarrio/mi-barrio-frontend
+ RUN  v3.2.7 <WORKSPACE>/mi-barrio-frontend
 
  ✓ tests/unit/format.test.ts (1 test) 6ms
  ✓ tests/integration/BarrioFicha.test.tsx (2 tests) 138ms

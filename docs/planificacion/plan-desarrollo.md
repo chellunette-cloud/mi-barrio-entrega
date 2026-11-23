@@ -4,7 +4,9 @@
 **Principio:** construir primero el núcleo demostrable (ficha, mapa, catálogo, filtros) y después las funcionalidades que dependen de datos con limitaciones.
 **Regla:** ninguna fase se cierra sin pruebas ejecutadas y evidencia registrada.
 **Revisión 1.1 (2026-11-15):** se incorporan los ajustes de alcance de HU-04/06/09/10/11. **D-2…D-6 aprobadas**; **D-7 pendiente** para la fase administrativa y sin bloqueo para HU-01/HU-02.
-**Revisión 1.2 (2026-11-15):** Fase 1 implementada y en pruebas con HU-01/HU-02; no cerrada ni validada. No se inició la Fase 2.
+**Revisión 1.2 (2026-11-15, registro histórico):** Fase 1 implementada y en pruebas con HU-01/HU-02; no cerrada ni validada. En ese momento no se había iniciado la Fase 2.
+
+> **Estado vigente a 23 de noviembre de 2026:** las fases 1–14.7 fueron ejecutadas y Fase 14.7 está cerrada técnicamente; el despliegue gratuito en Render se ejecutó en Fase 15.2. D-2…D-7 aprobadas; D-7 implementada con evidencia. La matriz canónica registra 46/46 criterios aprobados acumulados; el run remoto `44979541605` (`success`, 36/36 en 15 archivos) es regresión, no ejecución individual de los 46. Los seis manuales y la documentación de despliegue ya existen. P0-01 NO APROBADO; P0-02 aprobado para la integridad consultada. La publicación del portal y el enlace único ya están resueltos en <https://chellunette-cloud.github.io/mi-barrio-entrega/>; siguen pendientes corrección de P0-01, PT-01, PT-02, auditoría WCAG formal y aceptación académica.
 
 ---
 
@@ -276,8 +278,24 @@ Una historia se considera terminada solo si:
 
 ## 12. Estado actual
 
-| Fase | Estado |
-|------|--------|
+### 12.1 Estado vigente (2026-11-22)
+
+| Ámbito | Situación |
+|---|---|
+| Requerimientos, criterios, trazabilidad, investigación, especificaciones, arquitectura y plan | Documentados; la matriz vigente es [`../evidencias/fase-13/matriz-global-46-criterios.md`](../evidencias/fase-13/matriz-global-46-criterios.md), con **46/46 criterios aprobados** |
+| Desarrollo funcional | Avanzado: fases 1–14.7 ejecutadas en los tres repositorios publicados en `main` |
+| Validaciones técnicas | Avanzadas: regresión E2E remota de Fase 14.7, run `44979541605` (`success`, 36/36 pruebas en 15 archivos), con artefacto `playwright-report` verificado |
+| Estado de Fase 14.7 | **Cerrada técnicamente**; no equivale a cierre académico ni a despliegue |
+| Pendiente | Entrega final, PT-01, PT-02, auditoría WCAG formal y aceptación académica. El despliegue, la publicación del portal y el enlace único ya están ejecutados. Los seis manuales y la documentación de despliegue están disponibles. |
+
+La evidencia remota se detalla en [`../evidencias/fase-14-7/ejecucion-e2e-remota.md`](../evidencias/fase-14-7/ejecucion-e2e-remota.md). Ese run cubre los recorridos de los 15 archivos de pruebas; **no ejecutó individualmente los 46 criterios** y **no implica que el sistema esté desplegado**.
+
+### 12.2 Registro histórico de la planificación (2026-11-15)
+
+La tabla y el párrafo siguientes conservan lo previsto originalmente y **no describen la situación vigente**:
+
+| Fase | Estado histórico |
+|------|------------------|
 | Requerimientos, criterios, trazabilidad, investigación, especificaciones, arquitectura, plan | ✅ Documentados |
 | Fase 1 — Fundaciones y núcleo | 🟡 Implementada y en pruebas — no cerrada; faltan PT-01, auditoría formal de accesibilidad y staging HTTPS |
 | Fases 2 a 6 | ⬜ No iniciadas |
@@ -285,4 +303,4 @@ Una historia se considera terminada solo si:
 La Fase 1 está implementada con HU-01/HU-02 y evidencia real en
 [`../evidencias/fase-1/README.md`](../evidencias/fase-1/README.md). **No se declaró `Validada`** y no se
 inició la Fase 2. Los pendientes que impiden cerrar la fase son PT-01, la auditoría formal de
-accesibilidad y el staging HTTPS. **D-7 no bloquea HU-01/HU-02.**
+accesibilidad y el staging HTTPS. **D-7 no bloquea HU-01/HU-02.** Las fases 2–14.7 se ejecutaron después; este registro se mantiene como planificación original, no como estado actual.

@@ -3,6 +3,8 @@
 **Fecha:** 2026-11-15 · **Alcance:** únicamente HU-01 (ficha general) y HU-02 (mapa y polígono).
 **Estado:** `En pruebas`. No se declara ninguna historia `Validada` y no se inició la Fase 2.
 
+> **Nota de estado (2026-11-22):** este documento es el registro histórico de la Fase 1. Las referencias a repositorios sin remoto y a la ejecución remota pendiente corresponden a esa fecha. El estado vigente es el de la [opción C](../../README.md): tres repositorios independientes publicados, sin submódulos, con versiones registradas en el [manifiesto de versiones](../../../entrega/manifiesto-versiones.md). La presencia o ausencia de archivos en este portal se rige por el índice de evidencias, no por la configuración de submódulos.
+
 Esta evidencia se generó contra el stack local real: frontend Vite, API pública, backend privado,
 PostgreSQL 16.13 + PostGIS 3.7.0. Los archivos de esta carpeta son la salida directa de las
 ejecuciones; no son capturas reconstruidas ni datos inventados.
@@ -34,7 +36,7 @@ es la local equivalente, registrada en §5.
 | Atributos oficiales `barrio-atributos-oficial.json` | `58EC23169DBA0C43EEEA8D0339C04DD07DE1B29C61D8AA9631087C31BF8FF229` |
 
 Los tres snapshots se verifican antes de la carga y el ETL falla si un hash no coincide. Ver
-[`verify-data.log`](verify-data.log) y [`../../mi-barrio-backend/data/source/manifest.json`](../../mi-barrio-backend/data/source/manifest.json).
+[`verify-data.log`](verify-data.log). El manifiesto `data/source/manifest.json` pertenece al repositorio independiente `mi-barrio-backend` y no está incluido en este portal: con la opción C los repositorios se referencian por URL HTTPS y manifiesto de versiones, sin submódulos. Su ruta canónica es `mi-barrio-backend/data/source/manifest.json`.
 
 ## 3. Migraciones y ETL
 
@@ -65,7 +67,7 @@ La verificación de integridad geográfica quedó así:
 | Manzanas | `34`; `34` con estrato `2`; `0` inválidas |
 | Contención | `34/34` dentro del polígono |
 
-Ver [`db-validation.txt`](db-validation.txt) y [`../../mi-barrio-backend/tests/geographic/geometry.test.ts`](../../mi-barrio-backend/tests/geographic/geometry.test.ts).
+Ver [`db-validation.txt`](db-validation.txt). La prueba `tests/geographic/geometry.test.ts` pertenece al repositorio independiente `mi-barrio-backend` y no está incluida en este portal: con la opción C los repositorios se referencian por URL HTTPS y manifiesto de versiones, sin submódulos. Su ruta canónica es `mi-barrio-backend/tests/geographic/geometry.test.ts`.
 
 ## 4. Respuestas reales de la API
 

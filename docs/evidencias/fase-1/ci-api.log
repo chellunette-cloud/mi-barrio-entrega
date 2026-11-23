@@ -25,7 +25,7 @@ OK contrato interno 03873c01e4ef1ed65b0fd7ef629c1a1bbd3b85e53c0f81ade791c7219e23
 > vitest run
 
 
-[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/samyl/OneDrive/Documentos/miBarrio/mi-barrio-api[39m
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90m<WORKSPACE>/mi-barrio-api[39m
 
  [32m✓[39m tests/contract/public.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 97[2mms[22m[39m
  [32m✓[39m tests/integration/http.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 42[2mms[22m[39m

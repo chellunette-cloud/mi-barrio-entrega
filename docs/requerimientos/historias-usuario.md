@@ -1,10 +1,12 @@
 # Historias de usuario — Mi Barrio, Ciudad Granada
 
-**Versión:** 1.2 · **Fecha:** 2026-11-15
+**Versión:** 1.3 · **Fecha:** 2026-11-22
 **Convención:** `HU-NN`. Actor: `AC-01` Visitante, `AC-02` Administrador.
 **Revisión 1.1 (2026-11-15):** se aplicaron los ajustes de alcance para HU-04 (cobertura parcial), HU-06 (método 28/15/1), HU-09 (sin rutas/horarios), HU-10 (barrio vs UPZ) y HU-11 (localidad, no barrio). No cambiaron IDs ni el número de historias.
 **Revisión 1.2 (2026-11-15):** HU-01 y HU-02 pasan a `En pruebas` con evidencia real de Fase 1. Las demás siguen `Registrada`; no hay historias `Validadas` ni `Desplegadas`.
+**Revisión 1.3 (2026-11-22):** se añade la §2.1 con los **criterios de aceptación aprobados en la matriz canónica**. No cambian IDs, criterios ni los estados históricos de las revisiones anteriores.
 Estados permitidos: `Registrada` → `En análisis` → `Aprobada` → `En desarrollo` → `En pruebas` → `Validada` → `Desplegada`.
+**Estado vigente:** ver §2.1. El sistema está desplegado en Render desde la Fase 15.2 con P0-01 NO APROBADO y P0-02 aprobado para la integridad consultada; no se declara aceptación académica.
 
 ---
 
@@ -31,6 +33,29 @@ Estados permitidos: `Registrada` → `En análisis` → `Aprobada` → `En desar
 - **Alta:** sostiene el resto de la aplicación (ficha, mapa, catálogo, filtros). Sin ellas no hay producto demostrable.
 - **Media:** completa la utilidad pública con datos oficiales disponibles; requiere curaduría.
 - **Baja:** depende de datos agregados o de menor granularidad; se entrega con limitaciones declaradas.
+
+### 2.1 Estado actual según la matriz canónica (2026-11-22)
+
+La tabla siguiente resume los **criterios de aceptación aprobados en la matriz canónica** [`../evidencias/fase-13/matriz-global-46-criterios.md`](../evidencias/fase-13/matriz-global-46-criterios.md), que registra 46/46 aprobados. La regresión remota de Fase 14.7 se documenta en [`../evidencias/fase-14-7/ejecucion-e2e-remota.md`](../evidencias/fase-14-7/ejecucion-e2e-remota.md).
+
+| HU | Criterios aprobados | Total |
+|---|---:|---:|
+| HU-01 | 4 | 4 |
+| HU-02 | 4 | 4 |
+| HU-03 | 4 | 4 |
+| HU-04 | 4 | 4 |
+| HU-05 | 3 | 3 |
+| HU-06 | 3 | 3 |
+| HU-07 | 3 | 3 |
+| HU-08 | 3 | 3 |
+| HU-09 | 3 | 3 |
+| HU-10 | 3 | 3 |
+| HU-11 | 3 | 3 |
+| HU-12 | 4 | 4 |
+| HU-13 | 5 | 5 |
+| **Total** | **46** | **46** |
+
+**Alcance:** estos valores reflejan **criterios de aceptación aprobados en la matriz canónica**; no implican una ejecución individual de los 46 criterios en el run remoto, ni sistema desplegado, ni que el profesor haya realizado la aceptación académica. Las filas `Estado:` de la §2 se conservan como registro histórico de las versiones 1.1 y 1.2.
 
 ---
 

@@ -5,6 +5,8 @@
 **Regla:** un criterio solo se marca cumplido cuando existe una prueba ejecutada y su evidencia registrada en la matriz de trazabilidad.
 **Revisión 1.1 (2026-11-15):** se precisaron CA-HU04-02, CA-HU06-03, CA-HU09-03, CA-HU10-02 y CA-HU11-02. No cambiaron IDs ni el total de 46 criterios.
 
+> **Estado vigente a 22 de noviembre de 2026:** los 46 criterios definidos en este documento están registrados como **aprobados de forma acumulada** en la [matriz canónica de Fase 13](../evidencias/fase-13/matriz-global-46-criterios.md) (46/46). La regresión remota de Fase 14.7 (`44979541605`, `success`, 36/36 pruebas en 15 archivos) cubre los recorridos de las pruebas Playwright y **no ejecutó individualmente los 46 criterios**. Este aviso no declara despliegue, PT-01, PT-02, auditoría WCAG formal ni aceptación académica.
+
 Nomenclatura: `CA-HUxx-nn`.
 
 ---
@@ -303,4 +305,4 @@ entonces el sistema lo impide y ofrece reasignar los lugares (RN-08).
 | HU-06 | 3 | HU-13 | 5 |
 | HU-07 | 3 | **Total** | **46** |
 
-Todos los criterios están en estado **Pendiente de verificación**.
+**Estado histórico (2026-11-15):** Todos los criterios estaban en estado **Pendiente de verificación** en la versión original. El estado vigente es el aviso «Estado vigente a 22 de noviembre de 2026» al inicio de este documento y la [matriz canónica de Fase 13](../evidencias/fase-13/matriz-global-46-criterios.md), con 46/46 criterios aprobados acumulados.
